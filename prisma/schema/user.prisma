@@ -1,0 +1,14 @@
+
+model User {
+  id             Int       @id @default(autoincrement())
+  userName       String
+  email          String    @unique
+  password       String
+  profilePicture String?
+  created_At     DateTime  @default(now())
+  otp            Int?
+  otp_Expires    DateTime?
+  refreshToken   refreshToken?
+  role   String @default("user")
+  payments payment[]
+}

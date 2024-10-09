@@ -1,0 +1,49 @@
+{
+  "name": "nodejs-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=PRODUCTION & node dist/index.js",
+    "dev": "nodemon dist/index.js",
+    "watch": "npx tsc -w",
+    "build": "npx tsc -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.7.4",
+    "@types/nodemailer": "^6.4.16",
+    "@types/stripe": "^8.0.417",
+    "@types/validator": "^13.12.2",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.15",
+    "prisma": "^5.20.0",
+    "stripe": "^17.1.0",
+    "validator": "^13.12.0"
+  }
+}

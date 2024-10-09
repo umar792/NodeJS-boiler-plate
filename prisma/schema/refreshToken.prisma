@@ -1,0 +1,6 @@
+model refreshToken {
+    id           Int    @id @default(autoincrement())
+    refreshToken String
+    user_id      Int @unique
+    user         User @relation(fields: [user_id], references: [id])
+}
