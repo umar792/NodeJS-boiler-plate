@@ -75,7 +75,7 @@ class StripeService {
                         name: sessiondata.customer_details?.name || "",
                         user: {
                             connect: {
-                                id: 1,
+                                id: req.user.id,
                             }
                         }
 

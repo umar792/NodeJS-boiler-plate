@@ -87,7 +87,7 @@ class UserService {
             }
 
             // validate password
-            const isMatchPassword = await bcrypt.compare(password, isEmail.password);
+            const isMatchPassword = await bcrypt.compare(password, isEmail.password || "");
             if (!isMatchPassword) {
                 return next(new errorHandler('Invalid credentials', 404))
             }
@@ -229,9 +229,9 @@ class UserService {
             if (isBodyValidator) {
                 return next(new errorHandler(isBodyValidator, 400))
             }
-
+            
             // compare old pass
-            const isMatch = await bcrypt.compare(oldPassword, req.user.password);
+            const isMatch = await bcrypt.compare(oldPassword, req.user.password || "");
             if (!isMatch) {
                 return next(new errorHandler("Old password is incorrect", 400))
             };

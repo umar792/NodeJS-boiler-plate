@@ -129,7 +129,7 @@ class PaypalService {
                     platform: "paypal",
                     user: {
                         connect: {
-                            id: 1
+                            id: req.user.id
                         }
                     }
                 }

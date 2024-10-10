@@ -1,14 +1,15 @@
-
 model User {
-  id             Int       @id @default(autoincrement())
+  id             Int           @id @default(autoincrement())
   userName       String
-  email          String    @unique
-  password       String
+  email          String        @unique
+  password       String?
   profilePicture String?
-  created_At     DateTime  @default(now())
+  created_At     DateTime      @default(now())
   otp            Int?
   otp_Expires    DateTime?
   refreshToken   refreshToken?
-  role   String @default("user")
-  payments payment[]
+  role           String        @default("user")
+  signupType     String        @default("credentials")
+  social_id      String?
+  payments       payment[]
 }

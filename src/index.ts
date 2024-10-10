@@ -8,6 +8,9 @@ import routes from "./routes/index.routes.js";
 import { errorHandler } from "./utils/errorHandler.js";
 import { responseHandler } from "./helpers/responseHandler.js";
 import express, { Express, NextFunction, Request, Response } from "express";
+// @ts-ignore
+import passport from 'passport';
+
 
 const app: Express = express();
 // dotenv
@@ -29,6 +32,8 @@ app.get("/", (req: Request, res: Response) => {
     responseHandler.handleResponse(res, "Welcome to nodejs boilerplate", 200, true)
 })
 
+// passport middleware
+app.use(passport.initialize());
 
 
 const server = app.listen(process.env.PORT, () => {
